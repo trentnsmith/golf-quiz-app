@@ -2,3 +2,21 @@
     box-sizing: border-box;
   }
 
+  header {
+    margin-top: 25px;
+    height:80px;
+    margin-bottom: 40px;
+  }
+
+  .flex-container-header {
+      display: flex;
+      justify-content: center;
+  }
+
+  main {
+      width: 50%;
+      margin-left: 25%;
+  }
+
+  
+
