@@ -1,4 +1,5 @@
-const STORE = [
+const STORE = {
+    questions: [
     {
       question: 'What does the term "scratch golfer" mean?',
       answers: [
@@ -52,43 +53,93 @@ const STORE = [
         '37',
         '25'
       ],
-      
-let score = 0;
-let questionNumber = 0;
-
-function generateQuestion() {
-    if (questionNumber < STORE.length) {
-        return createThing(questionNumber);
-    }   else {
+      correctAnswer: '18'
     }
-}
+],
+score: 0,
+questionNumber: 0
+};
 
+//will start the quiz when someone clicks on "Let's Go!"
 function startQuiz() {
     $('#start').on('click', function(event) {
-        renderAQuestion();
+        generateQuestion();
     });
 }
 
+//chooses which answers to display from the store array
+function questionOptions() {
+    let question = STORE.questions[STORE.questionNumber];
+    for(let i=0; i<question.options.length; i++) {
+         
+}
 
 
+//displays a question
+function generateQuestion() {
+    /*let question = STORE.questions[STORE.questionNumber];
+    updateScore();
+    //let answers =  
+    const questionHtml = $(`
+    <div>
+    <form id="js-questions" class="question-form">
+        
+        <fieldset>
+            <div class="question-title">
+                <legend>${question.question}</legend>
+                
+                <input type="radio" name="answer" value=" ">${STORE.questions}<br>
+                <input type="radio" name="answer" value=" ">${STORE.questions}<br>
+                <input type="radio" name="answer" value=" ">${STORE.questions}<br>
+                <input type="radio" name="answer" value=" ">${STORE.questions}<br>
+             </div>
+        <div class="button-options">
+            <button type="button" id="next-question">Next Question</button>
+        </div>
+        </fieldset>
+    </form>
+    </div>`);
+    $('main').html(questionHtml);
+    questionOptions();*/
+    console.log('`generateQuestion ran`')
+}
+
+/*checks whether the chosen option is right or wrong and displays respective message*/ 
+function handleSelectOption() {
+    console.log('`handleSelectOption ran`')
+}
+
+
+//reset the stats on the final page after someone restarts the quiz
 function resetStats() {
-    score = 0;
-    questionNumber = 0;
-    $('.score').text(0);
-    $('.questionNumber').text(0);
+    console.log('`resetStates ran`')
   }
 
-function restartQuiz () {
+  //restarts the quiz when someone clicks on the restart button on the final page
+function restartQuiz() {
     $('quiz-body').on('click', '#restart', (event) => {
-        event.preventDefault();
-        resetScore();
-        renderAQuestion();
+        generateQuestion();
     });
 }
 
+//display the final page with score and retake quiz option
+function displayFinal() {
+    console.log('`displayFinal ran`')
+}
+
+//decides whether or not to display the next question or display the final page
+function handleQuestions() {
+     $('body').on('submit', '#next-question', (event) => {
+         if(STORE.questionNumber === STORE.questions.length) {
+             displayFinal();
+        } else {
+            generateQuestion();
+        }
+     });
+ }
 
 function handleQuizApp() {
-    startQuiz ();
+    startQuiz();
     handleQuestions();
     handleSelectOption();
     restartQuiz();
