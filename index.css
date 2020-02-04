@@ -1,53 +1,53 @@
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
 
-  body {
-    font-family: 'Permanent Marker';
-    margin: 0;
-    background-size: cover;
-    /*background-image: url("https://i.pinimg.com/originals/d6/f4/0a/d6f40abce6547e18518ae4f751b37e21.jpg");
-    background-color: transparent;*/
-  }
-  
-  header {
-    margin-top: 25px;
-    height:80px;
-    margin-bottom: 60px;
-    font-size: 25px;
-    /*color: whitesmoke;*/
-  }
+body {
+  font-family: 'Permanent Marker';
+  margin: 0;
+  background-size: cover;
+  /*background-image: url("https://i.pinimg.com/originals/d6/f4/0a/d6f40abce6547e18518ae4f751b37e21.jpg");
+  background-color: transparent;*/
+}
 
-  .flex-container-header {
-      display: flex;
-      justify-content: center;
-  }
+header {
+  margin-top: 25px;
+  height:80px;
+  margin-bottom: 60px;
+  font-size: 25px;
+  /*color: whitesmoke;*/
+}
 
-  main {
-      width: 50%;
-      margin-left: 25%;
-  }
+.flex-container-header {
+    display: flex;
+    justify-content: center;
+}
 
-  fieldset {
-    width: 80%;
-    padding: 40px;
-    margin: 0 auto;
-    /*background:rgba(208, 236, 175, 0.945);*/
-    border-radius: 10px;
-  }
+main {
+    width: 50%;
+    margin-left: 25%;
+}
 
-  button {
-    margin-top:10px;
-    font-family: 'Permanent Marker';
-    color: whitesmoke;
-    font-size: 20px;
-    background: rgb(2, 73, 34);
-    border: 0;
-    cursor: pointer;
-    border-radius:3px;
-    padding: 10px 20px;
-  }
+fieldset {
+  width: 80%;
+  padding: 40px;
+  margin: 0 auto;
+  /*background:rgba(208, 236, 175, 0.945);*/
+  border-radius: 10px;
+}
 
-  button:hover {
-      color: yellowgreen;
-  }
+button {
+  margin-top:10px;
+  font-family: 'Permanent Marker';
+  color: whitesmoke;
+  font-size: 20px;
+  background: rgb(2, 73, 34);
+  border: 0;
+  cursor: pointer;
+  border-radius:3px;
+  padding: 10px 20px;
+}
+
+button:hover {
+    color: yellowgreen;
+}
